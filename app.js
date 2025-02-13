@@ -31,9 +31,10 @@ const initializeDbAndServer = async () => {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );`
     );
-    app.listen(3000, () =>
-      console.log("Server running at http://localhost:3000/")
-    );
+    app.listen(5000, () => {
+      console.log('Server running on port 5000');
+    });
+
   } catch (error) {
     console.log(`DB Error: ${error.message}`);
     process.exit(1);
